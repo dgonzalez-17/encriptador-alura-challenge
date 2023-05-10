@@ -1,0 +1,871 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+body {
+    background: #F3F5FC;
+}
+
+/* CSS VECTOR LOGO ALURA*/
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#vector-logo {
+    position: absolute;
+    left: 4.67%;
+    right: 37.43%;
+    top: 35%;
+    bottom: 0%;
+}
+
+main {
+    position: absolute;
+    width: 97%;
+    height: 95%;
+}
+
+.seccion-izquierda {
+    position: absolute;
+    width: 70%;
+    height: 97%;
+    top: 40px;
+    left: 0%;
+    top: 40px;
+
+}
+
+/* contenedor del input de texto*/
+.caja-texto {
+    position: absolute;
+    width: 60%;
+    top: 10%;
+    height: 75%;
+    left: 20%;
+}
+
+/*text area de ingreso texto*/
+#input-texto {
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 32px;
+    color: #0A3871;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 150px;
+    max-height: 100%;
+    border: none;
+    background: none;
+    overflow-y: hidden;
+    resize: none;
+    height: auto;
+}
+
+
+#input-texto:focus {
+    outline: none;
+    border: none;
+}
+
+/*contenedor botones y texto inferior*/
+.inferior {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+/*logo de información*/
+.informacion {
+    display: inline-block;
+    text-align: center;
+    width: 10px;
+    height: 10px;
+    background-image: url("../img/informacion.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 6px;
+}
+
+/*texto de aviso*/
+#aviso {
+    width: 100%;
+    order: -1;
+    height: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    padding-bottom: 10px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+    flex: none;
+    flex-grow: 0;
+    text-align: center;
+    left: 47.5%;
+}
+
+/*botón encriptar*/
+#button-encriptar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    gap: 8px;
+    width: 15%;
+    height: 67px;
+    background: #0A3871;
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-right: 10px;
+    text-align: center;
+    color: white;
+}
+
+#button-encriptar:hover {
+    font-weight: bold;
+    font-size: 14px;
+    background: #0c4385;
+    cursor: pointer;
+}
+
+/*botón desencriptar*/
+#button-desencriptar {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    gap: 8px;
+    width: 15%;
+    height: 67px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    text-align: center;
+
+}
+
+#button-desencriptar:hover {
+    font-weight: bold;
+    font-size: 14px;
+    background: #e8e8e8;
+    cursor: pointer;
+}
+
+/*Sección derecha*/
+.seccion-derecha {
+    position: absolute;
+    width: 30%;
+    height: 97%;
+    right: 0%;
+    top: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+.imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 60%;
+    /* Esto es opcional, para darle altura al contenedor */
+}
+
+#imagen-busqueda {
+    max-width: 100%;
+    max-height: 100%;
+    align-self: center;
+}
+
+.aviso-mensaje {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40%;
+}
+
+/* Ningún mensaje fue encontrado */
+#no-mensaje {
+    width: 70%;
+    height: 5%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+    align-self: center;
+
+}
+
+/* Ingresa el texto que desees encriptar o desencriptar. */
+#solicitud-mensaje {
+    width: 70%;
+    height: 5%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: center;
+    color: #495057;
+    align-self: center;
+}
+
+/*contenedor de texto salida de la funcion*/
+.texto-salida {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 85%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+/*texto salida de la función, es un <p>*/
+#texto-vivo {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    width: 90%;
+    height: 90%;
+    align-self: center;
+    line-height: 1.5;
+    color: #495057;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    box-sizing: border-box;
+  }
+
+.boton-copiar {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    height: 15%;
+    left: 0;
+    width: 100%;
+}
+
+#button-copiar {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    gap: 8px;
+    width: 65%;
+    height: 2em;
+    background: #ffffff;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    border-radius: 24px;
+    flex: none;
+    text-align: center;
+}
+
+#button-copiar:hover {
+    font-weight: bold;
+    font-size: 18px;
+    background: #e8e8e8;
+    cursor: pointer;
+}
+
+.alerta {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    z-index: 999;
+    opacity: .8;
+    color: #000
+}
+
+.mostrar-alerta {
+    display: block;
+}
+
+/* Estilos para dispositivos medianos */
+@media screen and (min-width: 481px) and (max-width: 800px) {
+
+    /* CSS VECTOR LOGO ALURA*/
+    header {
+        width: 100%;
+        height: 7%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    #vector-logo {
+        width: 2em;
+        height: 2em;
+        position: absolute;
+        left: 4.67%;
+        right: 37.43%;
+        top: 1em;
+        bottom: 0.5em;
+    }
+
+    main {
+        position: absolute;
+        align-items: center;
+        width: 100%;
+        height: 93%;
+        top: 7%;
+        left: 0;
+    }
+
+    .seccion-izquierda {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 80%;
+        top: 0;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .caja-texto {
+        position: relative;
+        align-self: flex-start;
+        width: 90%;
+        left: auto;
+        height: 60%;
+    }
+
+    #input-texto {
+        position: absolute;
+        align-self: center;
+        font-family: 'Inter';
+        font-style: normal;
+        font-size: 1.5em;
+        color: #0A3871;
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 150px;
+        max-height: 85%;
+        border: none;
+        background: none;
+        overflow-y: hidden;
+        resize: none;
+        height: auto;
+    }
+
+    #input-texto:focus {
+        outline: none;
+        border: none;
+    }
+
+    /*contenedor botones y texto inferior*/
+    .inferior {
+        justify-content: center;
+        align-items: flex-end;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: absolute;
+        bottom: 1em;
+        left: 0;
+        width: 100%;
+        /* height: 40%; */
+
+    }
+
+    /*logo de información*/
+    .informacion {
+        display: inline-block;
+        text-align: center;
+        align-items: center;
+        width: 10px;
+        height: 10px;
+        background-image: url("../img/informacion.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 6px;
+    }
+
+    /*texto de aviso*/
+    #aviso {
+        width: 100%;
+        height: 2em;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #495057;
+        opacity: 0.8;
+        text-align: center;
+
+    }
+
+    /*botón encriptar*/
+    #button-encriptar {
+        align-items: center;
+        justify-content: center;
+        margin: 0 0;
+        padding: 24px;
+        width: 35%;
+        height: 3em;
+        background: #0A3871;
+        border-radius: 24px;
+        font-size: 1.2em;
+        color: white;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        text-align: center;
+
+    }
+
+    #button-encriptar:hover {
+        font-weight: bold;
+        font-size: 14px;
+        background: #0c4385;
+        cursor: pointer;
+    }
+
+    /*botón desencriptar*/
+    #button-desencriptar {
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        gap: 8px;
+        width: 35%;
+        height: 3em;
+        background: #D8DFE8;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        font-size: 1.2em;
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+        text-align: center;
+
+    }
+
+    #button-desencriptar:hover {
+        font-weight: bold;
+        font-size: 14px;
+        background: #e8e8e8;
+        cursor: pointer;
+    }
+
+    .seccion-derecha {
+        position: relative;
+        width: 90%;
+        /* height: 15%; */
+        max-height: 30%;
+        margin: auto;
+        top: 80%;
+        /* ajustar según la altura de seccion-izquierda */
+        background: #FFFFFF;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+    }
+
+    .imagen {
+        display: none;
+    }
+
+    /* Ningún mensaje fue encontrado */
+    #no-mensaje {
+        width: 70%;
+        height: 5%;
+        font-family: 'Inter';
+        font-weight: bold;
+        font-size: 24px;
+        padding: 1em;
+        line-height: 120%;
+        text-align: center;
+        color: #343A40;
+        align-self: center;
+
+    }
+
+    /* Ingresa el texto que desees encriptar o desencriptar. */
+    #solicitud-mensaje {
+        width: 70%;
+        height: 20%;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #495057;
+        align-self: center;
+    }
+
+    /*contenedor de texto salida de la funcion*/
+    .texto-salida {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 75%;
+        width: 100%;
+        overflow-y: auto;
+        top: 70px;
+    }
+
+    /*texto salida de la función, es un <p>*/
+    #texto-vivo {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        width: 90%;
+        height: 90%;
+        align-self: center;
+        line-height: 150%;
+        color: #495057;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+
+    .boton-copiar {
+        justify-content: center;
+        align-self: center;
+        position: absolute;
+        bottom: 1em;
+        height: auto;
+        left: 0;
+        width: 100%;
+    }
+
+    #button-copiar {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        gap: 8px;
+        width: 65%;
+        height: 1em;
+        background: #ffffff;
+        border: 1px solid #0A3871;
+        color: #0A3871;
+        border-radius: 24px;
+        flex: none;
+        text-align: center;
+    }
+
+    #button-copiar:hover {
+        font-weight: bold;
+        font-size: 18px;
+        background: #e8e8e8;
+        cursor: pointer;
+    }
+
+}
+
+/* Estilos para dispositivos pequeños */
+@media screen and (max-width: 480px) {
+
+    /* CSS VECTOR LOGO ALURA*/
+    header {
+        width: 100%;
+        height: 7%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    #vector-logo {
+        width: 2em;
+        height: 2em;
+        position: absolute;
+        left: 4.67%;
+        right: 37.43%;
+        top: 1em;
+        bottom: 0.5em;
+    }
+
+    main {
+        position: absolute;
+        align-items: center;
+        width: 100%;
+        height: 93%;
+        top: 7%;
+        left: 0;
+    }
+
+    .seccion-izquierda {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 65%;
+        top: 0;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .caja-texto {
+        position: relative;
+        align-self: flex-start;
+        width: 90%;
+        left: auto;
+        height: 60%;
+    }
+
+    #input-texto {
+        position: absolute;
+        align-self: center;
+        font-family: 'Inter';
+        font-style: normal;
+        font-size: 1.5em;
+        color: #0A3871;
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 150px;
+        max-height: 85%;
+        border: none;
+        background: none;
+        overflow-y: hidden;
+        resize: none;
+        height: auto;
+    }
+
+    #input-texto:focus {
+        outline: none;
+        border: none;
+    }
+
+    /*contenedor botones y texto inferior*/
+    .inferior {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+
+    }
+
+    /*logo de información*/
+    .informacion {
+        display: inline-block;
+        text-align: center;
+        align-items: center;
+        width: 10px;
+        height: 10px;
+        background-image: url("../img/informacion.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 6px;
+    }
+
+    /*texto de aviso*/
+    #aviso {
+        width: 100%;
+        height: 10px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        padding-bottom: 10px;
+        line-height: 150%;
+        color: #495057;
+        opacity: 0.8;
+        text-align: center;
+
+    }
+
+    /*botón encriptar*/
+    #button-encriptar {
+        align-items: center;
+        justify-content: center;
+        margin: 0 0;
+        padding: 24px;
+        width: 95%;
+        height: 3em;
+        background: #0A3871;
+        border-radius: 24px;
+        font-size: 1.2em;
+        color: white;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        text-align: center;
+
+    }
+
+    #button-encriptar:hover {
+        font-weight: bold;
+        font-size: 14px;
+        background: #0c4385;
+        cursor: pointer;
+    }
+
+    /*botón desencriptar*/
+    #button-desencriptar {
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        gap: 8px;
+        width: 95%;
+        height: 3em;
+        background: #D8DFE8;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        font-size: 1.2em;
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+        text-align: center;
+
+    }
+
+    #button-desencriptar:hover {
+        font-weight: bold;
+        font-size: 14px;
+        background: #e8e8e8;
+        cursor: pointer;
+    }
+
+    .seccion-derecha {
+        position: relative;
+        width: 90%;
+        height: 30%;
+        margin: auto;
+        top: 65%;
+        /* ajustar según la altura de seccion-izquierda */
+        background: #FFFFFF;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+    }
+
+    .imagen {
+        display: none;
+    }
+
+    /* Ningún mensaje fue encontrado */
+    #no-mensaje {
+        width: 70%;
+        height: 5%;
+        font-family: 'Inter';
+        font-weight: bold;
+        font-size: 24px;
+        padding: 1em;
+        line-height: 120%;
+        text-align: center;
+        color: #343A40;
+        align-self: center;
+
+    }
+
+    /* Ingresa el texto que desees encriptar o desencriptar. */
+    #solicitud-mensaje {
+        width: 70%;
+        height: 20%;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #495057;
+        align-self: center;
+    }
+
+    /*contenedor de texto salida de la funcion*/
+    .texto-salida {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 75%;
+        width: 100%;
+        overflow-y: auto;
+        top: 70px;
+    }
+
+    /*texto salida de la función, es un <p>*/
+    #texto-vivo {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.8em;
+        width: 90%;
+        align-self: center;
+        line-height: 150%;
+        color: #495057;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    .boton-copiar {
+        justify-content: center;
+        align-self: center;
+        position: absolute;
+        bottom: 0;
+        height: 25%;
+        left: 0;
+        width: 100%;
+    }
+
+    #button-copiar {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        gap: 8px;
+        width: 65%;
+        height: 2em;
+        background: #ffffff;
+        border: 1px solid #0A3871;
+        color: #0A3871;
+        border-radius: 24px;
+        flex: none;
+        text-align: center;
+    }
+
+    #button-copiar:hover {
+        font-weight: bold;
+        font-size: 18px;
+        background: #e8e8e8;
+        cursor: pointer;
+    }
+
+}
